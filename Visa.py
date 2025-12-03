@@ -14,7 +14,7 @@ print(Fore.RED+""""
 ░░╚██╔╝░░██║██████╔╝██║░░██║  ╚█████╔╝██║░░██║███████╗╚█████╔╝██║░╚██╗███████╗██║░░██║
 ░░░╚═╝░░░╚═╝╚═════╝░╚═╝░░╚═╝  ░╚════╝░╚═╝░░╚═╝╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝
                         This Tool For Visa Checker
-                     [!] Coded By Ahmed Samir  +201029107547 [!]
+                     [!] Coded By Vanish Now  +201286016083 [!]
 """)
 
 import random
@@ -24,7 +24,7 @@ import time
 
 def progress_bar():
     """محاكاة شريط تحميل تدريجي"""
-    bar_length = 30  # طول شريط التحميل
+    bar_length = 30  
     for i in range(bar_length + 1):
         bar = Fore.YELLOW + '=' * i + '.' * (bar_length - i) + Style.RESET_ALL
         print(f"\r{Fore.CYAN}Generating Visa... {bar} {Fore.MAGENTA}{i * 100 // bar_length}%{Style.RESET_ALL}", end='', flush=True)
@@ -47,10 +47,8 @@ def generate_visas():
                     cvc = ''.join(random.choices("1234567890", k=3))
                     balance = random.choice(balances)
                     
-                    # شريط التحميل
                     progress_bar()
                     
-                    # المخرجات
                     output = f"""
 {Fore.BLUE}=========================[ VISA INFO ]=========================={Style.RESET_ALL}
 {Fore.CYAN}Visa Number: {Fore.WHITE}{visa_number}{Style.RESET_ALL}
@@ -91,3 +89,4 @@ elif ch == "2":
     check_visa()
 else:
     print(Fore.RED + "[!] Invalid Choice" + Style.RESET_ALL)
+
